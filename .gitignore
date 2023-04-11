@@ -279,3 +279,5 @@ launchSettings.json
 *.bak
 
 *.d
+/build
+/CMake
