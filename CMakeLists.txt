@@ -80,6 +80,21 @@ include(CMake/GlobalSettingsInclude.cmake OPTIONAL)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 ################################################################################
+# Include directories
+################################################################################
+if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
+    include_directories(${PROJECT_NAME} PUBLIC
+        "${BARDY_DIR}/gipcy/include;"
+        "${BARDY_DIR}/brdinc"
+        "${BARDY_DIR}/brdinc/ctrladmpro"
+    )
+elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
+    include_directories(${PROJECT_NAME} PUBLIC
+        "${BARDY_DIR}/gipcy/include;"
+        "${BARDY_DIR}/brdinc"
+        "${BARDY_DIR}/brdinc/ctrladmpro"
+    )
+endif()
 # Sub-projects
 ################################################################################
 add_subdirectory(STEP10_DEVFUNC)

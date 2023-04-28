@@ -41,22 +41,6 @@ elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
         INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
     )
 endif()
-################################################################################
-# Include directories
-################################################################################
-if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-    target_include_directories(${PROJECT_NAME} PUBLIC
-        "${BARDY_DIR}/gipcy/include;"
-        "${BARDY_DIR}/brdinc;"
-        "${BARDY_DIR}/brdinc/ctrladmpro"
-    )
-elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x86")
-    target_include_directories(${PROJECT_NAME} PUBLIC
-        "${BARDY_DIR}/gipcy/include;"
-        "${BARDY_DIR}/brdinc;"
-        "${BARDY_DIR}/brdinc/ctrladmpro"
-    )
-endif()
 
 ################################################################################
 # Compile definitions
